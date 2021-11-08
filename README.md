@@ -13,3 +13,6 @@ The algorithm solves the cone detection analytically, the obstruction is solved 
 
 # Obstructed View
 To find if an object is behind another, it uses the bounds of the collider, at each edge of the bounds it casts a ray from the origin, to the end of the cone. If an object is found it is added to a list of objects detected.
+
+# Accuracy, Performance, Errors:
+This method aims to reduce the amount of raycasts to as little as possible. Due to this, it has less accuracy than mesh based or raycast methods, but performs faster. In particular, very large objects that only partially touch the cone will have less accuracy.
